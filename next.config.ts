@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
       remotePatterns: [
           { hostname: 'img.clerk.com'}
       ]
+  },
+  async rewrites() {
+      return [{ source: '/favicon.ico', destination: '/favicon.svg' }];
   }
 };
 
